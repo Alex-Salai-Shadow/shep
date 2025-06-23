@@ -3,21 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Александр Расюк - QA Engineer & Дизайнер</title>
-    
-    <!-- 
-        Автор: Александр Расюк
-        Версия: 2.1 (15.06.2025)
-        Особенности:
-        - Адаптивный дизайн с акцентом на читаемость
-        - Кастомные анимации для кнопок
-        - Уникальная цветовая схема
-    -->
-    
+    <title>Александр Расюк</title>
     <style>
-        /* ======================
-           БАЗОВЫЕ НАСТРОЙКИ 
-           ====================== */
+        /* Базовые стили */
         * {
             margin: 0;
             padding: 0;
@@ -25,22 +13,13 @@
             font-family: 'Arial', sans-serif;
         }
         
-        /* 
-           Основные цвета:
-           - Синий (#073554) - фирменный цвет
-           - Зеленый (#4CAF50) - акцентный
-           - Белый - для текста
-        */
         body {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background-color: #f9f9f9; /* Легкий фон для контраста */
         }
         
-        /* ======================
-           ШАПКА САЙТА 
-           ====================== */
+        /* Стили для шапки */
         .header {
             width: 100%;
             height: 100vh;
@@ -48,19 +27,16 @@
             max-height: 900px;
             background-image: url('https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(21).webp');
             background-size: cover;
-            background-position: center 30%; /* Сдвиг вниз для лучшей композиции */
+            background-position: center;
             background-repeat: no-repeat;
             position: relative;
             display: flex;
             flex-direction: column;
             flex: 1;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Добавил тень для глубины */
         }
         
-        /* ======================
-           ОСНОВНОЙ КОНТЕНТ 
-           ====================== */
+        /* Основной контейнер */
         .content-wrapper {
             width: 100%;
             padding-left: 50px;
@@ -70,30 +46,20 @@
             flex: 1;
         }
         
-        /* Имя - сделал более выразительным */
+        /* Стили для имени */
         .name {
             color: white;
             font-size: clamp(32px, 5vw, 52px);
             font-family: 'Bahnschrift', sans-serif;
             font-weight: bold;
-            padding: 12px 20px;
+            padding: 12px 0px;
             width: fit-content;
             max-width: 100%;
             margin-top: 50px;
             box-sizing: border-box;
-            background-color: rgba(7, 53, 84, 0.7); /* Полупрозрачный фон */
-            border-radius: 8px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Тень для лучшей читаемости */
-            animation: fadeIn 1s ease-out; /* Плавное появление */
         }
         
-        /* Анимация для имени */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Контейнер для профиля - переработал отступы */
+        /* Контейнер для фото и текста */
         .profile-container {
             display: flex;
             gap: 40px;
@@ -101,7 +67,7 @@
             align-items: flex-start;
         }
         
-        /* Фото профиля - добавил эффект при наведении */
+        /* Стили для фото */
         .profile-photo {
             width: 427px;
             height: 427px;
@@ -111,34 +77,25 @@
             object-fit: cover;
             background-color: #ddd;
             z-index: 1;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        .profile-photo:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
-        
-        /* Текст "Обо мне" - улучшил читаемость */
+        /* Стили для текстового блока */
         .about-me {
             width: 500px;
             height: 427px;
-            padding: 15px;
+            padding: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            color: rgba(255, 255, 255, 0.95); /* Более чистый белый */
+            color: rgba(220, 220, 220, 0.9);
             font-size: 18px;
-            line-height: 1.7; /* Увеличил межстрочный интервал */
+            line-height: 1.6;
             text-align: justify;
             font-weight: 500;
             letter-spacing: 0.5px;
-            background-color: rgba(0, 0, 0, 0.3); /* Легкий фон для текста */
-            border-radius: 8px;
-            backdrop-filter: blur(5px); /* Эффект размытия */
         }
         
-        /* Кнопки - переработал стили */
+        /* Контейнер для кнопок */
         .buttons-container {
             display: flex;
             justify-content: space-between;
@@ -150,8 +107,9 @@
             z-index: 2;
         }
         
+        /* Стили кнопок */
         .action-btn {
-            background: rgba(245, 245, 245, 0.9);
+            background: #f5f5f5;
             color: #073554;
             border: none;
             padding: 16px 10px;
@@ -167,56 +125,162 @@
             text-align: center;
             text-transform: uppercase;
             max-width: calc(25% - 15px);
-            position: relative;
-            overflow: hidden;
         }
         
-        /* Эффект при наведении на кнопку */
         .action-btn:hover {
             background: #e0e0e0;
             transform: translateY(-4px);
             box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-            color: #4CAF50; /* Изменение цвета текста */
         }
         
-        /* Эффект "волны" при клике */
-        .action-btn:after {
-            content: "";
+        /* Стили для текста кнопок */
+        .action-btn .full-text {
+            display: inline;
+        }
+        .action-btn .short-text {
+            display: none;
+        }
+
+        /* Модальное окно */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 800px;
+            width: 90%;
+            position: relative;
+            margin: 20px 0;
+        }
+        
+        .close-btn {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 5px;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.5);
-            opacity: 0;
-            border-radius: 100%;
-            transform: scale(1, 1) translate(-50%);
-            transform-origin: 50% 50%;
+            top: 20px;
+            right: 20px;
+            font-size: 32px;
+            cursor: pointer;
+            color: #333;
+            font-weight: bold;
         }
         
-        .action-btn:focus:not(:active)::after {
-            animation: ripple 0.6s ease-out;
+        /* Стили для изображений в модальных окнах */
+        .modal-image {
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease;
         }
         
-        @keyframes ripple {
-            0% {
-                transform: scale(0, 0);
-                opacity: 0.5;
-            }
-            100% {
-                transform: scale(20, 20);
-                opacity: 0;
-            }
+        .modal-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
         }
         
-        /* Остальные стили остаются без изменений... */
+        .modal-image:hover img {
+            transform: scale(1.02);
+        }
         
-        /* ======================
-           МЕДИАЗАПРОСЫ 
-           (Адаптация под разные устройства)
-           ====================== */
+        /* Галерея */
+        .modal-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        /* Специальные стили для разных форматов изображений */
+        .modal-image.vertical-img {
+            grid-row: span 2;
+        }
+        
+        .modal-image.vertical-img img {
+            height: 100%;
+            width: auto;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        
+        /* Стили для увеличенного изображения */
+        .modal-image.fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            z-index: 1100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0,0,0,0.9);
+            border-radius: 0;
+            cursor: zoom-out;
+        }
+        
+        .modal-image.fullscreen img {
+            max-width: 90%;
+            max-height: 90%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 0;
+        }
+        
+        /* Стили для подвала */
+        .footer {
+            background-color: #f5f5f5;
+            color: #073554;
+            padding: 25px;
+            text-align: center;
+            font-size: 17px;
+        }
+        
+        .footer-contacts {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-contacts a {
+            color: #073554;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 18px;
+        }
+        
+        .footer-contacts a:hover {
+            color: #4CAF50;
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+        
+        /* Адаптация для мобильных */
         @media (max-width: 1200px) {
-            /* Оптимизация для ноутбуков */
             .profile-photo {
                 width: 350px;
                 height: 350px;
@@ -224,40 +288,525 @@
             .about-me {
                 width: 400px;
                 height: 350px;
-                font-size: 17px;
+            }
+            .action-btn {
+                max-width: calc(25% - 15px);
             }
         }
         
         @media (max-width: 992px) {
-            /* Планшеты в альбомной ориентации */
             .content-wrapper {
                 padding-left: 40px;
                 padding-right: 40px;
             }
+            .profile-photo {
+                width: 300px;
+                height: 300px;
+            }
             .about-me {
-                backdrop-filter: none; /* Убираем размытие для производительности */
+                width: 350px;
+                height: 300px;
+                font-size: 16px;
+            }
+            .action-btn {
+                font-size: 14px;
+                padding: 14px 8px;
+                max-width: calc(25% - 15px);
             }
         }
         
-        /* ... остальные медиазапросы без изменений ... */
+        @media (max-width: 768px) {
+            .header {
+                height: auto;
+                min-height: 100vh;
+                padding: 15px;
+            }
+            
+            .content-wrapper {
+                padding-left: 20px;
+                padding-right: 20px;
+                align-items: center;
+            }
+            
+            .profile-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                margin-top: 20px;
+            }
+            
+            .profile-photo {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .about-me {
+                width: 100%;
+                min-height: auto;
+                height: auto;
+                padding: 0 10px;
+                text-align: left;
+            }
+            
+            .name {
+                margin: 30px auto 0;
+                text-align: center;
+                width: 100%;
+                padding: 12px 20px;
+                white-space: normal;
+            }
+            
+            .buttons-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 15px;
+                margin-bottom: 40px;
+                justify-content: center;
+            }
+            
+            .action-btn {
+                width: calc(50% - 10px);
+                padding: 12px;
+                font-size: 13px;
+                max-width: none;
+                min-width: 120px;
+            }
+            
+            /* Показываем короткий текст и скрываем полный на мобильных */
+            .action-btn .full-text {
+                display: none;
+            }
+            .action-btn .short-text {
+                display: inline;
+            }
+            
+            .modal-content {
+                padding: 30px;
+            }
+            
+            .footer-contacts {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .modal-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-image.vertical-img {
+                grid-row: span 1;
+            }
+            
+            .modal-image.vertical-img img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .profile-photo {
+                width: 240px;
+                height: 240px;
+            }
+            
+            .about-me {
+                font-size: 15px;
+            }
+            
+            .name {
+                font-size: 28px;
+                padding: 10px;
+            }
+            
+            .footer {
+                padding: 20px;
+            }
+            
+            .footer-contacts a {
+                font-size: 16px;
+            }
+            
+            .action-btn {
+                font-size: 12px;
+                padding: 10px;
+            }
+
+            .modal-content {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .profile-photo {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .about-me {
+                font-size: 14px;
+            }
+            
+            .name {
+                font-size: 24px;
+            }
+            
+            .action-btn {
+                width: 100%;
+                font-size: 12px;
+            }
+
+            .modal-content {
+                padding: 15px;
+                width: 95%;
+            }
+        }
+
+        /* Стили для резюме */
+        .resume-content {
+            margin-top: 20px;
+        }
+        
+        .resume-section {
+            margin-bottom: 25px;
+        }
+        
+        .resume-section h3 {
+            color: #073554;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .resume-item {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 3px solid #4CAF50;
+        }
+        
+        .resume-item h4 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .period {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .description {
+            color: #444;
+            line-height: 1.6;
+        }
+        
+        .description ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        
+        .description li {
+            margin-bottom: 5px;
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .skill-tag {
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+
+        /* Стили для модального окна резюме */
+        .resume-modal-content {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin: 20px auto;
+        }
+
+        .resume-header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .resume-header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .resume-header h2 {
+            margin: 5px 0 0;
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .resume-body {
+            padding: 30px;
+            overflow-y: auto;
+            max-height: calc(100vh - 200px);
+        }
+
+        .objective {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .objective h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .resume-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .experience-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            position: relative;
+        }
+
+        .experience-duration {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #3498db;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .experience-title {
+            margin: 0 0 5px;
+            color: #3498db;
+        }
+
+        .experience-company {
+            margin: 0 0 10px;
+            font-weight: 500;
+        }
+
+        .experience-period {
+            margin: 0 0 10px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .experience-details {
+            background: white;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-pill {
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+
+        .testing-skill {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .design-skill {
+            background: #f3e5f5;
+            color: #8e24aa;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #2980b9;
+        }
+
+        /* Стили для иконок в контактах */
+        .contact-item i {
+            min-width: 20px;
+            text-align: center;
+        }
+
+        /* Адаптация модального окна резюме для мобильных */
+        @media (max-width: 768px) {
+            /* Адаптация модального окна резюме */
+            .resume-columns {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            
+            .resume-header h1 {
+                font-size: 28px !important;
+            }
+            
+            .resume-header h2 {
+                font-size: 18px !important;
+            }
+            
+            .contact-info {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 10px !important;
+            }
+        
+            .experience-item {
+                padding: 12px !important;
+            }
+            
+            .experience-duration {
+                position: static !important;
+                display: inline-block !important;
+                margin-bottom: 10px !important;
+                background: none !important;
+                color: inherit !important;
+                padding: 0 !important;
+                font-weight: bold;
+                color: #3498db !important;
+            }
+            
+            .objective p {
+                font-size: 14px !important;
+            }
+            
+            .resume-body {
+                padding: 20px !important;
+            }
+            
+            .skills-container {
+                justify-content: center !important;
+            }
+
+            .resume-header {
+                padding: 20px !important;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .resume-header {
+                padding: 20px !important;
+            }
+            
+            .resume-header h1 {
+                font-size: 24px !important;
+            }
+            
+            .resume-header h2 {
+                font-size: 16px !important;
+            }
+            
+            .experience-title {
+                font-size: 18px !important;
+            }
+            
+            .experience-company, .experience-period {
+                font-size: 14px !important;
+            }
+            
+            .experience-details ul {
+                font-size: 13px !important;
+            }
+            
+            .skill-pill {
+                font-size: 11px !important;
+            }
+            
+            .download-btn {
+                padding: 8px 16px !important;
+                font-size: 14px !important;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .resume-header h1 {
+                font-size: 22px !important;
+            }
+            
+            .resume-header h2 {
+                font-size: 15px !important;
+            }
+            
+            .objective {
+                padding: 15px !important;
+            }
+            
+            .experience-item {
+                padding: 10px !important;
+            }
+            
+            .experience-details {
+                padding: 8px !important;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Блок шапки с фоновым изображением -->
+    <!-- Блок шапки -->
     <header class="header">
         <div class="content-wrapper">
-            <!-- Имя с анимацией появления -->
+            <!-- Блок с именем -->
             <div class="name">Александр Расюк</div>
             
-            <!-- Контейнер для профиля -->
+            <!-- Контейнер для фото и текста -->
             <div class="profile-container">
-                <!-- Фото с эффектом при наведении -->
-                <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(10).webp" 
-                     alt="Фото Александра Расюка" 
-                     class="profile-photo"
-                     title="QA Engineer & Дизайнер">
+                <!-- Блок для фото -->
+                <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(10).webp" alt="Фото Александра Расюка" class="profile-photo">
                 
-                <!-- Текстовый блок с персональным описанием -->
+                <!-- Текстовый блок -->
                 <div class="about-me">
                     На пересечении технологий и искусства: QA-инженер, для которого тестирование - это не только поиск багов, но и анализ эстетики интерфейса. Графический дизайнер, превращающий идеи в визуальные решения. Художник, оживляющий бумагу штрихами карандаша.
 
@@ -277,117 +826,420 @@
                 </div>
             </div>
             
-            <!-- Контейнер с кнопками-действиями -->
+            <!-- Контейнер с кнопками -->
             <div class="buttons-container">
-                <button class="action-btn" onclick="openModal('tattoo')" title="Мои работы по тестированию">
-                    <span class="full-text">ТЕСТИРОВАНИЕ</span>
-                    <span class="short-text">ТЕСТ</span>
-                </button>
-                <button class="action-btn" onclick="openModal('design')" title="Примеры графического дизайна">
-                    <span class="full-text">ДИЗАЙН</span>
-                    <span class="short-text">ДИЗ</span>
-                </button>
-                <button class="action-btn" onclick="openModal('art')" title="Мои художественные работы">
+                <button class="action-btn" onclick="openModal('tattoo')">ТЕСТИРОВАНИЕ</button>
+                <button class="action-btn" onclick="openModal('design')">ДИЗАЙН</button>
+                <button class="action-btn" onclick="openModal('art')">
                     <span class="full-text">ТВОРЧЕСТВО</span>
-                    <span class="short-text">АРТ</span>
+                    <span class="short-text">ТВОРЧЕСТВО</span>
                 </button>
-                <button class="action-btn" onclick="openModal('resume')" title="Мое профессиональное резюме">
-                    <span class="full-text">РЕЗЮМЕ</span>
-                    <span class="short-text">CV</span>
-                </button>
+                <button class="action-btn" onclick="openModal('resume')">РЕЗЮМЕ</button>
             </div>
         </div>
     </header>
     
-    <!-- Подвал с контактами -->
+    <!-- Подвал -->
     <footer class="footer">
         <div class="footer-contacts">
-            <a href="https://t.me/Alex_Shep007" target="_blank" title="Написать в Telegram">
-                <i class="fab fa-telegram"></i> @Alex_Shep007
-            </a>
-            <a href="mailto:shep.alex.07@gmail.com" title="Написать email">
-                <i class="fas fa-envelope"></i> shep.alex.07@gmail.com
-            </a>
-            <a href="tel:+89780199781" title="Позвонить">
-                <i class="fas fa-phone"></i> 8 978 019 97 81
-            </a>
+            <a href="https://t.me/Alex_Shep007" target="_blank">Телеграм: @Alex_Shep007</a>
+            <a href="mailto:shep.alex.07@gmail.com">Email: shep.alex.07@gmail.com</a>
+            <a href="tel:+89780199781">Телефон: 8 978 019 97 81</a>
         </div>
-        <div class="copyright">
-            © 2025 Александр Расюк. Все права защищены.<br>
-            <small>Сайт сделан вручную с ❤️ в Новороссийске</small>
-        </div>
+        <div class="copyright">© 2025 Все права защищены</div>
     </footer>
     
-    <!-- Модальные окна (остаются без изменений) -->
+    <!-- Модальные окна -->
+    <div id="tattoo-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('tattoo')">&times;</span>
+            <h2>Тестирование</h2>
+            
+            <!-- Галерея изображений (6 блоков) -->
+            <div class="modal-gallery">
+                <div class="modal-image">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(19).webp" alt="Пример работы по тестированию 1">
+                </div>
+                <div class="modal-image">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(16).webp" alt="Пример работы по тестированию 2">
+                </div>
+                <div class="modal-image">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(18).webp" alt="Пример работы по тестированию 3">
+                </div>
+                <div class="modal-image">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(20).webp" alt="Пример работы по тестированию 4">
+                </div>
+                <div class="modal-image">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(13).webp" alt="Пример работы по тестированию 5">
+                </div>
+                <div class="modal-image">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(14).webp" alt="Пример работы по тестированию 6">
+                </div>
+            </div>
+            
+            <p>Обеспечиваю полный цикл тестирования: от анализа требований до составления отчетов. С интересом отношусь к UI/UX тестированию, уделяю особое внимание эстетике и удобству интерфейсов. перепиши иначе. Исправь ошибки
+</p>
+        </div>
+    </div>
+    
+    <div id="design-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('design')">&times;</span>
+            <h2>Графический дизайн</h2>
+            
+            <!-- Галерея изображений (7 блоков - 3 вертикальных и 4 горизонтальных) -->
+            <div class="modal-gallery">
+                <!-- Вертикальные изображения -->
+                <div class="modal-image vertical-img">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(1).webp" alt="Вертикальный дизайн 1">
+                </div>
+                <div class="modal-image vertical-img">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(17).webp" alt="Вертикальный дизайн 2">
+                </div>
+                <div class="modal-image vertical-img">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(7).webp" alt="Вертикальный дизайн 3">
+                </div>
+                
+                <!-- Горизонтальные изображения -->
+                <div class="modal-image">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(6).webp" alt="Горизонтальный дизайн 1">
+                </div>
+                <div class="modal-image">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(9).webp" alt="Горизонтальный дизайн 2">
+                </div>
+                <div class="modal-image">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(8).webp" alt="Горизонтальный дизайн 3">
+                </div>
+                <div class="modal-image">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(15).webp" alt="Горизонтальный дизайн 4">
+                </div>
+            </div>
+            
+            <p>Создание уникального визуального стиля. Разрабатываю логотипы, фирменный стиль, полиграфию и цифровые макеты. Каждый проект - это тщательно продуманная композиция, где форма соответствует содержанию.</p>
+        </div>
+    </div>
+    
+    <div id="art-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('art')">&times;</span>
+            <h2>Изобразительное искусство</h2>
+            
+            <!-- Галерея изображений (5 вертикальных блоков) -->
+            <div class="modal-gallery">
+                <div class="modal-image vertical-img">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(5).webp" alt="Художественная работа 1">
+                </div>
+                <div class="modal-image vertical-img">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(12).webp" alt="Художественная работа 2">
+                </div>
+                <div class="modal-image vertical-img">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(3).webp" alt="Художественная работа 3">
+                </div>
+                <div class="modal-image vertical-img">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(11).webp" alt="Художественная работа 4">
+                </div>
+                <div class="modal-image vertical-img">
+                    <img src="https://raw.githubusercontent.com/Alex-Salai-Shadow/shep/refs/heads/main/foto%20(4).webp" alt="Художественная работа 5">
+                </div>
+            </div>
+            
+            <p>Авторские работы в различных техниках и стилях. Основные направления: графика, карандашный рисунок, цифровая живопись. Каждая работа - это исследование формы и поиск выразительных средств для передачи эмоций и идей.</p>
+        </div>
+    </div>
+    
+    <div id="resume-modal" class="modal">
+        <div class="resume-modal-content">
+            <span class="close-btn" onclick="closeModal('resume')">&times;</span>
+            
+            <!-- Шапка с контактами -->
+            <div class="resume-header">
+                <h1>Александр Расюк</h1>
+                <h2>QA Engineer / Инженер-тестировщик</h2>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i> +7 (961) 523-13-26
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i> alex.shep.07@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-telegram"></i> @Alex_Shep007
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i> Новороссийск
+                    </div>
+                </div>
+            </div>
+
+            <!-- Основное содержание -->
+            <div class="resume-body">
+                <!-- Цель и специализация -->
+                <div class="objective">
+                    <h3>Цель</h3>
+                    <p style="margin-bottom: 5px;"><strong>Позиция:</strong> QA Engineer/инженер-тестировщик</p>
+                    <p style="margin: 5px 0;"><strong>Занятость:</strong> полная занятость</p>
+                    <p style="margin: 5px 0;"><strong>График:</strong> полный день, сменный график, гибкий график, удаленная работа</p>
+                    <p style="margin: 5px 0;"><strong>Готовность к командировкам:</strong> Да</p>
+                </div>
+
+                <!-- Две колонки -->
+                <div class="resume-columns">
+                    
+                    <!-- Левая колонка -->
+                    <div>
+                        <!-- Опыт работы -->
+                        <div style="margin-bottom: 30px;">
+                            <h3 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; display: inline-block;">Опыт работы</h3>
+                            
+                            <!-- ООО Стройландия -->
+                            <div class="experience-item">
+                                <div class="experience-duration">2 года 5 мес</div>
+                                <h4 class="experience-title">QA Engineer</h4>
+                                <p class="experience-company">ООО "Стройландия"</p>
+                                <p class="experience-period">Февраль 2023 — июнь 2025</p>
+                                
+                                <div class="experience-details">
+                                    <p style="margin: 0 0 10px; font-size: 14px;">Розничная сеть (DIY и товары для дома), стройматериалы</p>
+                                    
+                                    <h5 style="margin: 10px 0 5px; font-size: 15px;">Обязанности:</h5>
+                                    <ul style="padding-left: 20px; margin: 0 0 10px; font-size: 14px;">
+                                        <li>Функциональное и регрессионное тестирование</li>
+                                        <li>Тестирование API (Postman, Charles)</li>
+                                        <li>Составление тест-кейсов и баг-репортов</li>
+                                        <li>Работа по методологии Scrum</li>
+                                        <li>SQL-запросы для проверки БД</li>
+                                        <li>Тестирование UI/UX</li>
+                                    </ul>
+                                    
+                                    <h5 style="margin: 10px 0 5px; font-size: 15px;">Инструменты:</h5>
+                                    <div class="skills-container">
+                                        <span class="skill-pill testing-skill">Jira</span>
+                                        <span class="skill-pill testing-skill">Confluence</span>
+                                        <span class="skill-pill testing-skill">Postman</span>
+                                        <span class="skill-pill testing-skill">Charles</span>
+                                        <span class="skill-pill testing-skill">Figma</span>
+                                        <span class="skill-pill testing-skill">SQL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Фриланс -->
+                            <div class="experience-item">
+                                <div class="experience-duration">3 года 6 мес</div>
+                                <h4 class="experience-title">Специалист по визуальным коммуникациям</h4>
+                                <p class="experience-company">Фриланс</p>
+                                <p class="experience-period">Апрель 2022 — настоящее время</p>
+                                
+                                <div class="experience-details">
+                                    <h5 style="margin: 10px 0 5px; font-size: 15px;">Обязанности:</h5>
+                                    <ul style="padding-left: 20px; margin: 0 0 10px; font-size: 14px;">
+                                        <li>Разработка макетов для печати</li>
+                                        <li>Монтаж видеофайлов</li>
+                                        <li>UI/UX дизайн сайтов</li>
+                                        <li>Модерация онлайн-мероприятий</li>
+                                    </ul>
+                                    
+                                    <h5 style="margin: 10px 0 5px; font-size: 15px;">Инструменты:</h5>
+                                    <div class="skills-container">
+                                        <span class="skill-pill design-skill">Photoshop</span>
+                                        <span class="skill-pill design-skill">Illustrator</span>
+                                        <span class="skill-pill design-skill">Figma</span>
+                                        <span class="skill-pill design-skill">After Effects</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Кафе -->
+                            <div class="experience-item">
+                                <div class="experience-duration">2 года 9 мес</div>
+                                <h4 class="experience-title">Бармен</h4>
+                                <p class="experience-company">Кафе «Старый город»</p>
+                                <p class="experience-period">Март 2020 — декабрь 2022</p>
+                                
+                                <div class="experience-details">
+                                    <ul style="padding-left: 20px; margin: 0; font-size: 14px;">
+                                        <li>Приготовление напитков</li>
+                                        <li>Ведение кассовой дисциплины</li>
+                                        <li>Заказ продукции</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Правая колонка -->
+                    <div>
+                        <!-- Обо мне -->
+                        <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
+                            <h3 style="margin-top: 0; color: #2c3e50;">Обо мне</h3>
+                            <p style="margin-bottom: 0; font-size: 14px;">QA-инженер с художественным образованием и опытом в графическом дизайне. Сочетаю технический склад ума с творческим подходом к решению задач. Особое внимание уделяю UI/UX тестированию, анализируя не только функциональность, но и эстетику интерфейсов.</p>
+                        </div>
+
+                        <!-- Образование -->
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; display: inline-block;">Образование</h3>
+                            
+                            <div class="experience-item">
+                                <h4 class="experience-title">Мирский государственный художественный колледж</h4>
+                                <p class="experience-period">2006-2009</p>
+                                <div class="experience-details">
+                                    <p style="margin: 0; font-size: 14px;">Специальность: Художник-оформитель, изготовитель художественных изделий из дерева</p>
+                                </div>
+                            </div>
+                            
+                            <div class="experience-item">
+                                <h4 class="experience-title">Курсы повышения квалификации</h4>
+                                <p class="experience-period">2022, 2025</p>
+                                <div class="experience-details">
+                                    <ul style="padding-left: 20px; margin: 0; font-size: 14px;">
+                                        <li>Инженер по тестированию</li>
+                                        <li>Автоматизированное тестирование на Python</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Навыки -->
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; display: inline-block;">Навыки</h3>
+                            
+                            <div class="experience-item">
+                                <h4 style="margin: 0 0 10px; color: #3498db; font-size: 16px;">Тестирование</h4>
+                                <div class="experience-details">
+                                    <div class="skills-container">
+                                        <span class="skill-pill testing-skill">Functional Testing</span>
+                                        <span class="skill-pill testing-skill">API Testing</span>
+                                        <span class="skill-pill testing-skill">Regression Testing</span>
+                                        <span class="skill-pill testing-skill">UI/UX Testing</span>
+                                        <span class="skill-pill testing-skill">SQL</span>
+                                        <span class="skill-pill testing-skill">Scrum</span>
+                                        <span class="skill-pill testing-skill">Jira</span>
+                                        <span class="skill-pill testing-skill">Postman</span>
+                                        <span class="skill-pill testing-skill">Charles</span>
+                                    </div>
+                                    
+                                    <h4 style="margin: 15px 0 10px; color: #3498db; font-size: 16px;">Дизайн</h4>
+                                    <div class="skills-container">
+                                        <span class="skill-pill design-skill">Figma</span>
+                                        <span class="skill-pill design-skill">Photoshop</span>
+                                        <span class="skill-pill design-skill">Illustrator</span>
+                                        <span class="skill-pill design-skill">After Effects</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Языки -->
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; display: inline-block;">Языки</h3>
+                            
+                            <div class="experience-item">
+                                <div class="experience-details">
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                        <span>Русский</span>
+                                        <span style="font-weight: 500; color: #3498db;">Свободно (C2)</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                        <span>Белорусский</span>
+                                        <span style="font-weight: 500; color: #3498db;">Родной</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <span>Английский</span>
+                                        <span style="font-weight: 500; color: #3498db;">Базовый (A2)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Дополнительно -->
+                        <div>
+                            <h3 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; display: inline-block;">Дополнительно</h3>
+                            
+                            <div class="experience-item">
+                                <div class="experience-details">
+                                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                        <i class="fas fa-car" style="color: #3498db;"></i>
+                                        <span>Права категории B</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <i class="fas fa-passport" style="color: #3498db;"></i>
+                                        <span>Разрешение на работу в РФ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Кнопка скачивания PDF -->
+                <div style="text-align: center;">
+                    <a href="https://drive.google.com/file/d/1NwbjEgdg8Tqgxpuvpn0IoLqf7xt6i6B4/view?usp=drive_link" class="download-btn" target="_blank">
+                        <i class="fas fa-download"></i> Скачать резюме (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- Подключение иконок Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <script>
-        // =====================================
-        // ОСНОВНЫЕ ФУНКЦИИ ДЛЯ РАБОТЫ САЙТА
-        // =====================================
-        
-        /**
-         * Открывает модальное окно
-         * @param {string} modalId - ID модального окна
-         */
+        // Функции для работы с модальными окнами
         function openModal(modalId) {
-            console.log(`Открытие модального окна: ${modalId}`); // Логирование для отладки
-            const modal = document.getElementById(modalId + '-modal');
-            if (modal) {
-                modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-                
-                // Плавное появление
-                modal.style.opacity = '0';
-                setTimeout(() => {
-                    modal.style.opacity = '1';
-                    modal.style.transition = 'opacity 0.3s ease';
-                }, 10);
-            }
+            document.getElementById(modalId + '-modal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         }
         
-        /**
-         * Закрывает модальное окно
-         * @param {string} modalId - ID модального окна
-         */
         function closeModal(modalId) {
-            const modal = document.getElementById(modalId + '-modal');
-            if (modal) {
-                modal.style.opacity = '0';
-                setTimeout(() => {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }, 300);
-            }
+            document.getElementById(modalId + '-modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
         
         // Закрытие модального окна при клике вне его
         window.onclick = function(event) {
             if (event.target.className === 'modal') {
-                event.target.style.opacity = '0';
-                setTimeout(() => {
-                    event.target.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }, 300);
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
             }
         }
         
-        // Инициализация после загрузки DOM
+        // Обработчики для увеличения изображений
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('Документ загружен, инициализация...');
-            
-            // Добавляем обработчик для увеличения изображений
+            // Находим все изображения в модальных окнах
             const modalImages = document.querySelectorAll('.modal-image');
             
+            // Добавляем обработчик клика для каждого изображения
             modalImages.forEach(image => {
                 image.addEventListener('click', function(e) {
-                    // Переключение режима полноэкранного просмотра
-                    this.classList.toggle('fullscreen');
-                    
+                    // Проверяем, не является ли изображение уже увеличенным
                     if (this.classList.contains('fullscreen')) {
-                        // Настройки для полноэкранного режима
+                        // Если да - возвращаем в исходное состояние
+                        this.classList.remove('fullscreen');
+                        this.style.position = '';
+                        this.style.width = '';
+                        this.style.height = '';
+                        this.style.margin = '';
+                        this.style.zIndex = '';
+                        this.style.display = '';
+                        this.style.justifyContent = '';
+                        this.style.alignItems = '';
+                        this.style.backgroundColor = '';
+                        this.style.borderRadius = '';
+                        this.style.cursor = '';
+                        
+                        // Восстанавливаем изображение
+                        const img = this.querySelector('img');
+                        img.style.maxWidth = '';
+                        img.style.maxHeight = '';
+                        img.style.width = '';
+                        img.style.height = '';
+                        img.style.objectFit = '';
+                        img.style.borderRadius = '';
+                    } else {
+                        // Если нет - увеличиваем
+                        this.classList.add('fullscreen');
                         this.style.position = 'fixed';
                         this.style.top = '0';
                         this.style.left = '0';
@@ -402,6 +1254,7 @@
                         this.style.borderRadius = '0';
                         this.style.cursor = 'zoom-out';
                         
+                        // Настраиваем изображение
                         const img = this.querySelector('img');
                         img.style.maxWidth = '90%';
                         img.style.maxHeight = '90%';
@@ -409,37 +1262,12 @@
                         img.style.height = 'auto';
                         img.style.objectFit = 'contain';
                         img.style.borderRadius = '0';
-                    } else {
-                        // Возврат к обычному виду
-                        this.style.position = '';
-                        this.style.width = '';
-                        this.style.height = '';
-                        this.style.margin = '';
-                        this.style.zIndex = '';
-                        this.style.display = '';
-                        this.style.justifyContent = '';
-                        this.style.alignItems = '';
-                        this.style.backgroundColor = '';
-                        this.style.borderRadius = '';
-                        this.style.cursor = '';
-                        
-                        const img = this.querySelector('img');
-                        img.style.maxWidth = '';
-                        img.style.maxHeight = '';
-                        img.style.width = '';
-                        img.style.height = '';
-                        img.style.objectFit = '';
-                        img.style.borderRadius = '';
                     }
                     
+                    // Останавливаем всплытие события, чтобы не закрывалось модальное окно
                     e.stopPropagation();
                 });
             });
-            
-            // Небольшая задержка для анимации загрузки
-            setTimeout(() => {
-                document.querySelector('.name').style.animationPlayState = 'running';
-            }, 300);
         });
     </script>
 </body>
